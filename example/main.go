@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	fdelta "github.com/lostpeer/go-fossil-delta"
+	fdelta "github.com/zerobounty/fossil-delta"
 )
 
 func main() {

@@ -17,7 +17,7 @@ Other implementations:
 
 ### Install
 ```
-$ go get -u github.com/rg36/go-fossil-delta
+$ go get -u github.com/zerobounty/fossil-delta
 ```
 ### Example
 ```go
@@ -26,7 +26,7 @@ package main
 import (
 	"fmt"
 
-	fdelta "github.com/lostpeer/go-fossil-delta"
+	fdelta "github.com/zerobounty/fossil-delta"
 )
 
 func main() {

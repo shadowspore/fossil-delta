@@ -1,7 +1,5 @@
-module github.com/lostpeer/go-fossil-delta
+module github.com/zerobounty/fossil-delta
 
 go 1.13
 
-require (
-	github.com/stretchr/testify v1.4.0
-)
+require github.com/stretchr/testify v1.4.0
