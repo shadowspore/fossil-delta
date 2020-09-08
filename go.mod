@@ -1,4 +1,4 @@
-module github.com/zerobounty/fossil-delta
+module github.com/axvq/fossil-delta
 
 go 1.13
 
