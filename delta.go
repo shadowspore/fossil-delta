@@ -4,7 +4,7 @@ import "errors"
 
 const nHashSize = 16
 
-// Create returns the difference between origin and target
+// Create delta between origin and target byte slices.
 func Create(origin, target []byte) []byte {
 	zDelta := newWriter()
 	lenOut := len(target)
@@ -143,7 +143,7 @@ func Create(origin, target []byte) []byte {
 	return zDelta.ToArray()
 }
 
-// Apply returns target by patching origin with delta
+// Apply delta to origin byte slice.
 func Apply(origin, delta []byte) ([]byte, error) {
 	var err error
 	var ch rune
