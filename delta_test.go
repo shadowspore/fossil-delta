@@ -1,19 +1,20 @@
 package fdelta
 
 import (
+	"embed"
 	"fmt"
-	"io/ioutil"
 	"path/filepath"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
 
+//go:embed data
+var dataFS embed.FS
+
 func TestDelta(t *testing.T) {
 	readFile := func(path string) []byte {
-		data, err := ioutil.ReadFile(
-			filepath.FromSlash(path),
-		)
+		data, err := dataFS.ReadFile(filepath.FromSlash(path))
 		assert.Nil(t, err)
 		return data
 	}
@@ -58,9 +59,7 @@ func TestDelta(t *testing.T) {
 
 func BenchmarkCreateDelta(b *testing.B) {
 	readFile := func(path string) []byte {
-		data, err := ioutil.ReadFile(
-			filepath.FromSlash(path),
-		)
+		data, err := dataFS.ReadFile(filepath.FromSlash(path))
 		assert.Nil(b, err)
 		return data
 	}
@@ -102,9 +101,7 @@ func BenchmarkCreateDelta(b *testing.B) {
 
 func BenchmarkApplyDelta(b *testing.B) {
 	readFile := func(path string) []byte {
-		data, err := ioutil.ReadFile(
-			filepath.FromSlash(path),
-		)
+		data, err := dataFS.ReadFile(filepath.FromSlash(path))
 		assert.Nil(b, err)
 		return data
 	}
