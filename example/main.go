@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	fdelta "github.com/axvq/fossil-delta"
+	fdelta "github.com/shadowspore/fossil-delta"
 )
 
 func main() {

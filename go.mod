@@ -1,4 +1,4 @@
-module github.com/axvq/fossil-delta
+module github.com/shadowspore/fossil-delta
 
 go 1.13
 
